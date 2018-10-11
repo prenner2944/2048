@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#faf8ef"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:background="@drawable/title_box"
+        android:text="CS180's 2048"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:id="@+id/titleBox"
+        android:layout_above="@+id/scoreBox"
+        android:layout_alignEnd="@+id/undoBox"
+        android:layout_alignParentStart="true"
+        android:textSize="34sp" />
+
+    <TextView
+        android:background="@drawable/score_box"
+        android:text="Score\n0"
+        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:paddingTop="2dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:id="@+id/scoreBox"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <GridView
+        android:layout_width="340dp"
+        android:background="@drawable/grid_box"
+        android:padding="10dp"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:columnWidth="60dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:id="@+id/mainGrid"
+        android:layout_height="345dp"
+        android:layout_above="@+id/titleBox"
+        android:layout_alignParentStart="true">
+    </GridView>
+
+    <TextView
+        android:text="Join the numbers and get the 2048 tile!"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:paddingTop="3dp"
+        android:textColor="#766d65"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:background="@drawable/option_box"
+        android:text="Undo"
+        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:paddingTop="3dp"
+        android:textColor="#ffffff"
+        android:id="@+id/undoBox"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/scoreBox" />
+
+    <TextView
+        android:background="@drawable/option_box"
+        android:text="Reset"
+        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:paddingTop="3dp"
+        android:textColor="#ffffff"
+        android:id="@+id/resetBox"
+        android:layout_below="@+id/titleBox"
+        android:layout_toEndOf="@+id/scoreBox" />
+
+    <Button
+        android:text="UP"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/upButton"
+        android:layout_below="@+id/mainGrid"
+        android:layout_marginLeft="250dp"
+        android:textSize="8sp"
+        android:onClick="upAction"/>
+
+    <Button
+        android:text="DOWN"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/downButton"
+        android:layout_below="@+id/mainGrid"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="110dp"
+        android:textSize="8sp"
+        android:onClick="downAction"/>
+
+    <Button
+        android:text="Left"
+        android:id="@+id/leftButton"
+        android:layout_below="@+id/mainGrid"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="54dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textSize="8sp"
+        android:onClick="leftAction"/>
+
+    <Button
+        android:text="RIGHT"
+        android:id="@+id/rightButton"
+        android:layout_below="@+id/mainGrid"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="54dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textSize="8sp"
+        android:onClick="rightAction"/>
+</RelativeLayout>
